@@ -75,3 +75,8 @@ initial_nn_params <- as.vector(c(t1, t2))
 print("Checking Backpropagation")
 checkNNGradients()
 
+lambda <- 3
+print('Checking Backpropagation (w/ lambda = 3)')
+checkNNGradients(lambda)
+
+
