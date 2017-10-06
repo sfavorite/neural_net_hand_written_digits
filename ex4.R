@@ -1,5 +1,6 @@
 # Neural Network using back propagation for hand-written digit recognition - this is based on code from Andrew Ing's ML course
 
+# functional will provide our optimization function: optim()  
 library('functional')
 source("nnCostFunction.R")
 source("logistic_functions.R")
