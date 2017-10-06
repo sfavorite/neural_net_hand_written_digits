@@ -56,4 +56,10 @@ g = sigmoidGradient(c(1, -0.5, 0, 0.5, 1))
 print(sprintf("G: %f", g))
 cat("\n")
 
+# Create random weights to match the input/hidden/output(num_labels)
+print("Initializing Neural Network Parameters")
+cat("\n")
+initial_Theta1 = randomInitialWeights(input_layer_size, hidden_layer_size)
+initial_Theta2 = randomInitialWeights(hidden_layer_size, num_labels)
+
 
