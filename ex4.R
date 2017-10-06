@@ -25,3 +25,21 @@ y <- as.matrix(data[,401])
 
 # How many samples do we have
 m <- nrow(x)
+
+# Initial weights provided by Andrew Ing...only needed for testing functions.
+Theta1 <- read.csv("theta1.csv", header=FALSE)
+Theta2 <- read.csv("theta2.csv", header=FALSE)
+
+# Unroll parameters
+t1 <- unlist(Theta1)
+t2 <- unlist(Theta2)
+nn_params <- as.vector(c(t1, t2))
+
+print("Feedforward Using Neural Network ...")
+cat("\n")
+lambda <- 0
+J <- nnCostFunction(nn_params, input_layer_size, hidden_layer_size, num_labels, x, y, lambda)
+print("Cost should be 0.287629")
+print(sprintf("Cost is: %f", J[[1]]))
+cat("\n")
+
