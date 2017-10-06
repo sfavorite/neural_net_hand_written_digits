@@ -26,9 +26,17 @@ nnCostFunction <- function(nn_params, input_layer_size, hidden_layer_size, num_l
       Theta2_grad <- matrix(0, nrow(x), ncol(x))
       I = diag(num_labels)
       Y_ten = matrix(0, nrow=m, ncol=num_labels)
-      for (i in 1:m) {
-            Y_ten[i, ] = I[y[i], ]
-      }
+      #for (i in 1:m) {
+      #      Y_ten[i, ] = I[y[i], ]
+      #}
+      # Convert y to a dataframe for One-hot-encoding 
+      df_y <- as.data.frame(y)
+      colnames(df_y) <- c("y")
+      # We need factors to do One-hot-encoding 
+      df_y$y <- as.factor(df_y$y)
+      # Encode y
+      Y_ten <- model.matrix(~ . + 0, data=df_y, contrasts.arg = lapply(df_y, contrasts, contrasts=FALSE))
+      
       
       a1 = x
       z2 = a1 %*% t(Theta1)
