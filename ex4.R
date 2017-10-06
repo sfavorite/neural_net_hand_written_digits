@@ -53,9 +53,10 @@ print(sprintf("Cost is : %f", J[[1]]))
 cat("\n")
 print("Evaluating sigmoid gradient at [1, -0.5, 0, 0.5, 1]")
 print("Values should be:   0.196612 0.235004 0.250000 0.235004 0.196612")
+known_values <- c(0.196612, 0.235004, 0.250000, 0.235004, 0.196612)
 g = sigmoidGradient(c(1, -0.5, 0, 0.5, 1))
 print(sprintf("G: %f", g))
-print(sprintf("They match? %s", identical(round(g, 6) , know_values)))
+print(sprintf("They match? %s", identical(round(g, 6) , known_values)))
 cat("\n")
 
 # Create random weights to match the input/hidden/output(num_labels)
@@ -79,4 +80,6 @@ lambda <- 3
 print('Checking Backpropagation (w/ lambda = 3)')
 checkNNGradients(lambda)
 
+debug_J <- nnCost(initial_nn_params, input_layer_size, hidden_layer_size, num_labels, x, y, lambda)
+debug_J[[1]]
 
