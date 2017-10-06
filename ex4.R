@@ -66,7 +66,7 @@ initial_Theta2 = randomInitialWeights(hidden_layer_size, num_labels)
 t1 <- unlist(initial_Theta1)
 t2 <- unlist(initial_Theta2)
 
-# Setup initial network paramaters to use in optima() below
+# Setup initial network parameters to use in optima() below
 initial_nn_params <- as.vector(c(t1, t2))
 
 
