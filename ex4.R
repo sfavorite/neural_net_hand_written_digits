@@ -44,3 +44,16 @@ print("Cost should be 0.287629")
 print(sprintf("Cost is: %f", J[[1]]))
 cat("\n")
 
+print("Checking Cost Function (w/ Regularization) using lambda 1...")
+print("Cost should be about 0.383770")
+lambda <- 1
+
+J <- nnCostFunction(nn_params, input_layer_size, hidden_layer_size, num_labels, x, y, lambda)
+print(sprintf("Cost with lambda = 1: %f", J[[1]]))
+cat("\n")
+print("Evaluating sigmoid gradient at [1, -0.5, 0, 0.5, 1]")
+g = sigmoidGradient(c(1, -0.5, 0, 0.5, 1))
+print(sprintf("G: %f", g))
+cat("\n")
+
+
