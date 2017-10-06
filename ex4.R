@@ -16,4 +16,12 @@ input_layer_size <- 400
 hidden_layer_size <- 25
 num_labels <- 10
 
+# Load the data 
 load("ex4data.RData")
+
+# Convert the image (x) and labels (y) to a matrix 
+x <- as.matrix(data[,1:400])
+y <- as.matrix(data[,401])
+
+# How many samples do we have
+m <- nrow(x)
