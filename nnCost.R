@@ -46,7 +46,7 @@ nnCost <- function(nn_params, input_layer_size, hidden_layer_size, num_labels, x
       
       # Compute regularization 
       reg = (lambda / (2*m)) * (sum(sum(Theta1[, -1] ^ 2)) + sum(sum((Theta2[, -1]) ^ 2)))
-      # Compute the cost 
+      # Compute the cost using Cross-entropy error function
       J <- (1/m) * sum(sum(-Y_ten * log(a3) - (1 - Y_ten) * log(1 - a3))) + reg
       
       return(J)
