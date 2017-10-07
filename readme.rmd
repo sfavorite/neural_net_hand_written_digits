@@ -14,4 +14,8 @@ knitr::opts_chunk$set(echo = TRUE)
 This program is a neural network using the backpropagation algorithm to classifiy hand written digits 0 ... 9. It is based on the machine learning course taught by Andrew Ing <http://www.andrewng.org>. 
 
 
+* To produce a .md file (something github can display) from this file (readme.rmd) use the following: 
+
+knit(input="readme.rmd", output = "readme.md")
+
 
