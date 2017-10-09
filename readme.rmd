@@ -5,17 +5,24 @@ date: "10/6/2017"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ## Neural Network using backpropagation 
 
-This program is a neural network using the backpropagation algorithm to classifiy hand written digits 0 ... 9. It is based on the machine learning course taught by Andrew Ing <http://www.andrewng.org>. 
+This program is a neural network using the backpropagation algorithm to classifiy hand written digits 0 ... 9. It is based on the machine learning course taught by Andrew Ing <http://www.andrewng.org>. The data set was also provided by Mr. Ing. 
 
+The code is written and tested in R version 3.2.4. 
+
+I do not consider this to be production ready code. Please use it with that it mind but I license this with the MIT license Copyright 2017 Scot Favorite.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. <https://opensource.org/licenses/MIT>
+
+N.B.
 
 * To produce a .md file (something github can display) from this file (readme.rmd) use the following: 
 
 knit(input="readme.rmd", output = "readme.md")
 
-
+** You can see the original class at cousera <https://www.coursera.org/learn/machine-learning/>
