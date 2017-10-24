@@ -11,6 +11,8 @@ This program is a neural network using the backpropagation algorithm to classifi
 
 The code is written and tested in R version 3.2.4. 
 
+You will notice that the number zero is treated like the number ten. This is because the original data set was from octave which had an array index of 1. Mr. Ing used ten for the zero...I have kept it this way since it is conversion of the octave solution. 
+
 I do not consider this to be production ready code. Please use it with that it mind but I license this with the MIT license Copyright 2017 Scot Favorite.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
