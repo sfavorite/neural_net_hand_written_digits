@@ -1,6 +1,6 @@
 # This cost function returns a list with the cost (J) and the gradient.
-# It can NOT be used with optim(), the optimization function used in ex4.R,
-# fail on seeing a list since optim() expects a scalar and will.
+# It can NOT be used with optim(), the optimization function used in ex4.R.
+# optim() expects a scalar and will fail if a list is returned
 
 # optim is the general-purpose optimization in the stats package
 # For more information: ?optim()
